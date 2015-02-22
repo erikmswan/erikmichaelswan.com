@@ -1,0 +1,132 @@
+/*******************************
+
+Sandbox project
+Began 2015-2-8
+Erik Swan
+
+Testing HTML5 and Javascript
+
+********************************/
+
+/****************************
+
+Main CSS file for HTML5 and JS testing project
+Began 2015-2-8
+Erik Swan
+
+****************************/
+
+@import url(http://fonts.googleapis.com/css?family=Roboto:100,100italic,700,700italic);
+@keyframes soft-appear {  
+  0% { background: rgba(217, 100, 89, 0); }  
+  100% { background: rgba(217, 100, 89, 1);}
+}
+
+/**** Generic Elements ***/
+
+	html, body {
+		background-color: #588C7E;
+		font-family: Roboto, arial, sans-serif;
+	}
+
+	h1, h2, h3, h4, h5, h6, p {
+		color:#fff;
+	}
+	
+	h1 {
+		font-size:2.5em;
+	}
+	
+	h2 {
+		font-size:2.3em;
+	}
+	
+	h3 {
+		font-size:2.1em;
+	}
+	
+	h4 {
+		font-size:1.9em;
+	}
+	
+	h5 {
+		font-size: 1.7em;
+	}
+	
+	h6 {
+		font-size: 1.5em;
+	}
+	
+	p {
+		font-size:1em;
+		line-height:1.3em;
+		color: #fff;
+	}
+	
+	a {
+		text-decoration: none;
+		color:#fff;
+	}
+	
+	em {
+		font-style:italic;
+	}
+	
+	strong {
+		font-weight:700;
+	}
+	
+	nav {
+		float:right;
+		margin-top:40px;
+		margin-right:20%;
+	}
+	
+	
+/*** Clearfix ***/
+
+.cf:before,
+.cf:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.cf:after {
+    clear: both;
+}
+
+	
+/*** Main Nav ***/
+	
+	.main-header {
+		background: #8C4646;
+		padding: 20px 0 0 10%;
+		border-bottom:5px solid #F2AE72;
+		scroll:fixed;
+	}
+
+	.nav-title {
+		float:left;
+		padding-bottom:10px;
+	}
+	
+	.nav-title h1 {
+		margin-left:-3.4px
+	}
+	
+	li.menu-button {
+		display:inline-block;
+	}
+	
+	li.menu-button a {
+		line-height:2em;
+		padding: 8px 20px;
+	}
+	
+	li.menu-button:hover {
+		color:#D96459;
+		animation-name: soft-appear;
+		animation-duration:.15s;
+		animation-timing-function:ease-in;
+		animation-fill-mode:forwards;
+	}

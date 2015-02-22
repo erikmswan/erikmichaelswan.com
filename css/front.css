@@ -1,0 +1,47 @@
+
+/****************************
+
+Front page CSS file for HTML5 and JS testing project
+Began 2015-2-8
+Erik Swan
+
+****************************/
+
+/*** Full-width graphics ***/
+
+.full-bg {
+	height:859px;
+	width:100%;
+	background: url(images/Painting-Background.jpg) 50% 70% no-repeat;
+	background-size: cover;
+}
+
+.quote-top, .quote-mid, .quote-bottom {
+	text-align:center;
+}
+
+.quote-top {
+	font-size:3.5em;
+	line-height:300px;
+}
+
+.quote-mid {
+	font-size:2.5em;
+	line-height:1em;
+}
+
+.quote-bottom {
+	font-size:5em;
+	line-height:300px;
+	text-align:center;
+}
+.quote-attribution {
+	text-align:right;
+	font-style:italics;
+	font-size:2.5em;
+	line-height:2em;
+	margin-right:30%;
+	margin-top:-50px;
+	
+}
+
