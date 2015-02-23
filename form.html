@@ -4,8 +4,6 @@
 <title>HTML5 Testing</title>
 <link rel="stylesheet" type="text/css" href="css/reset.css">
 <link rel="stylesheet" type="text/css" href="css/main.css">
-<link rel="stylesheet" type="text/css" href="css/front.css">
-<link rel="stylesheet" type="text/css" href="css/content.css">
 </head>
 <body>
 	<header class="main-header cf">
@@ -37,17 +35,31 @@
 	<section class="container">
 		<div class="content">
 			<article class="w2-3">
-				<h1>
-					Test Content
+				<h1 class="page-title">
+					Registration
 				</h1>
-				<p>
-					This is some test body text. This is some test body text. This is some test body text.
-					This is some test body text. This is some test body text. This is some test body text.
-					This is some test body text. This is some test body text. This is some test body text. 
-					This is some test body text. This is some test body text. This is some test body text. 
-					This is some test body text. This is some test body text. This is some test body text. 
-					This is some test body text. This is some test body text. This is some test body text. 				
-				</p>
+				<form action="/login" method="post">
+					<fieldset>
+						<legend>
+							Login
+						</legend>
+						<label>
+							<span class="relative-label">
+								Username
+							</span>
+							<input type="text" name="username" required>
+						</label>
+						<label>
+							<span class="relative-label">
+								Password
+							</span>
+							<input type="password" name="password" required>
+						</label>
+					</fieldset>
+					<button name="submit">
+						Submit
+					</button>
+				</form>
 			</article>
 			<aside class="w1-3">
 				<h3>
