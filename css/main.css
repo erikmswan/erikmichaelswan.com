@@ -1,16 +1,17 @@
 /*******************************
 
-Sandbox project
-Began 2015-2-8
-Erik Swan
+erikmichaelswan.com
+	Began 2015-2-8
 
-Testing HTML5 and Javascript
+Erik Swan
+	Web Developer
+	Wizard of Time
 
 ********************************/
 
 /****************************
 
-Main CSS file for HTML5 and JS testing project
+Main CSS file for erikmichaelswan.com
 Began 2015-2-8
 Erik Swan
 
@@ -161,7 +162,7 @@ Erik Swan
 
 	form {
 		border:1px white solid;
-		background:linear-gradient(#D96459 0%,#F2AE72 100%);
+		background:#D96459;
 	}
 	fieldset {
 		border:1px white solid;
@@ -183,9 +184,10 @@ Erik Swan
 		left:20px;
 	}
 	button {
-		background:linear-gradient(#D96459 0%,#F2AE72 100%);
+		background:#D96459;
 		border-radius:20px;
 		margin:10px;
+		color:#fff;
 	}
 	input:hover {
 		box-shadow: 0px 0px 10px #8C4646;
