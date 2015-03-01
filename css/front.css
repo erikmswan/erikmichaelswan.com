@@ -1,8 +1,22 @@
-
 /****************************
 
 Front page stylesheet
 erikmichaelswan.com
+Began 2015-2-8
+Erik Swan
+
+Color Palette:
+    Green: #588C7E
+    Yellow: #F2E394
+    Orange: #F2AE72
+    Red: #D96459
+    Crimson: #8C4646
+
+****************************/
+
+/****************************
+
+Main stylesheet
 Began 2015-2-8
 Erik Swan
 
@@ -38,7 +52,7 @@ Erik Swan
 }
 .quote-attribution {
 	text-align:right;
-	font-style:italics;
+	font-style:italic;
 	font-size:2.5em;
 	line-height:2em;
 	margin-right:30%;
