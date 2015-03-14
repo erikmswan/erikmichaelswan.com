@@ -1,0 +1,253 @@
+/*******************************
+
+erikmichaelswan.com
+	Began 2015-2-8
+
+Erik Swan
+	Web Developer
+	Wizard of Time
+
+Color Palette:
+    Green: #588C7E
+    Yellow: #F2E394
+    Orange: #F2AE72
+    Red: #D96459
+    Crimson: #8C4646
+
+********************************/
+
+/****************************
+
+Style.css
+Began 2015-2-8
+Erik Swan
+
+****************************/
+
+
+@import url(http://fonts.googleapis.com/css?family=Roboto:100,100italic,700,700italic);
+@keyframes soft-appear {  
+  0% { background: rgba(217, 100, 89, 0); }  
+  100% { background: rgba(217, 100, 89, 1);}
+}
+
+/**** Reset ***/
+    html, body, div, span, applet, object, iframe,
+    h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+    a, abbr, acronym, address, big, cite, code,
+    del, dfn, em, img, ins, kbd, q, s, samp,
+    small, strike, strong, sub, sup, tt, var,
+    b, u, i, center,
+    dl, dt, dd, ol, ul, li,
+    fieldset, form, label, legend,
+    table, caption, tbody, tfoot, thead, tr, th, td,
+    article, aside, canvas, details, embed, 
+    figure, figcaption, footer, header, hgroup, 
+    menu, nav, output, ruby, section, summary,
+    time, mark, audio, video {
+        margin: 0;
+        padding: 0;
+        border: 0;
+        font-size: 100%;
+        font: inherit;
+        vertical-align: baseline;
+    }
+
+/* HTML5 display-role reset for older browsers */
+    article, aside, details, figcaption, figure, 
+    footer, header, hgroup, menu, nav, section {
+        display: block;
+    }
+    body {
+        line-height: 1;
+    }
+    ol, ul {
+        list-style: none;
+    }
+    blockquote, q {
+        quotes: none;
+    }
+    blockquote:before, blockquote:after,
+    q:before, q:after {
+        content: '';
+        content: none;
+    }
+    table {
+        border-collapse: collapse;
+        border-spacing: 0;
+    }
+
+/**** Generic Elements ***/
+
+	html, body {
+		background-color: #588C7E;
+		font-family: Roboto, arial, sans-serif;
+	}
+
+	h1, h2, h3, h4, h5, h6, p {
+		color:#fff;
+	}
+	
+	h1 {
+		font-size:2.5em;
+	}
+	
+	h2 {
+		font-size:2.3em;
+	}
+	
+	h3 {
+		font-size:2.1em;
+	}
+	
+	h4 {
+		font-size:1.9em;
+	}
+	
+	h5 {
+		font-size: 1.7em;
+	}
+	
+	h6 {
+		font-size: 1.5em;
+	}
+	
+	p {
+		font-size:1em;
+		line-height:1.3em;
+		color: #fff;
+	}
+	
+	a {
+		text-decoration: none;
+		color:#fff;
+	}
+	
+	em {
+		font-style:italic;
+	}
+	
+	strong {
+		font-weight:700;
+	}
+	form {
+		color:#fff;
+	}
+	
+	nav {
+		float:right;
+		margin-top:40px;
+		margin-right:20%;
+	}
+	
+	
+/*** Clearfix ***/
+
+	.cf:before,
+	.cf:after {
+	    content: " "; /* 1 */
+	    display: table; /* 2 */
+	}
+	
+	.cf:after {
+	    clear: both;
+	}
+	
+
+/*** Main Nav ***/
+	
+	.main-header {
+		background: #8C4646;
+		padding: 20px 0 0 10%;
+		border-bottom:5px solid #F2AE72;
+		scroll:fixed;
+	}
+
+	.nav-title {
+		float:left;
+		padding-bottom:10px;
+	}
+	
+	.nav-title h1 {
+		margin-left:-3.4px
+	}
+	
+	li.menu-button {
+		display:inline-block;
+	}
+	
+	li.menu-button a {
+		line-height:2em;
+		padding: 8px 20px;
+	}
+	
+	li.menu-button:hover {
+		color:#D96459;
+		animation-name: soft-appear;
+		animation-duration:.15s;
+		animation-timing-function:ease-in;
+		animation-fill-mode:forwards;
+	}
+
+/*** Banner image with overlain quote styling ***/
+    
+    .full-bg {
+        height:859px;
+        width:100%;
+        background: url(images/Painting-Background.jpg) 50% 70% no-repeat;
+        background-size: cover;
+    }
+    
+    .quote-top, .quote-mid, .quote-bottom {
+        text-align:center;
+    }
+    
+    .quote-top {
+        font-size:3.5em;
+        line-height:300px;
+    }
+    
+    .quote-mid {
+        font-size:2.5em;
+        line-height:1em;
+    }
+    
+    .quote-bottom {
+        font-size:5em;
+        line-height:300px;
+        text-align:center;
+    }
+    .quote-attribution {
+        text-align:right;
+        font-style:italic;
+        font-size:2.5em;
+        line-height:2em;
+        margin-right:30%;
+        margin-top:-50px;
+        
+    }
+
+/*** 2/3-1/3 Column Wedge ***/
+
+    .content, .w2-3, .w1-3 {
+        box-sizing:padding-box;
+        padding: 20px;
+    }
+    .content {
+        width:60%;
+        margin-left:auto;
+        margin-right:auto;
+    }
+    .w2-3 {
+        width:66%;
+        float:left;
+    }
+    .w1-3 {
+        width:33%;
+        float:right;
+    }
+    .page-title {
+        padding-bottom:20px;
+    }
+    
+    
