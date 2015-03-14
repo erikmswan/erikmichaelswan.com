@@ -7,26 +7,48 @@
             Began 2015-2-8
         
         Erik Swan
+            Writer
             Web Developer
-            Wizard of Time
         
         -->
         <meta charset="UTF-8">
         <title>erikmichaelswan.com</title>
         <link rel="stylesheet" type="text/css" href="css/style.css">
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+        <script type="text/javascript">
+$j=jQuery.noConflict();
+$j(document).ready(function() {    
+    var nav = $j('.main-nav');
+            $j('.scroll-title-container').hide();
+    $j(window).scroll(function () {
+        if ($j(this).scrollTop() > 50) {
+            nav.addClass("scroll-nav");
+$j('.big-title').hide();
+$j('.scroll-title-container').show();
+        } else {
+            nav.removeClass("scroll-nav");
+$j('.big-title').show();
+$j('.scroll-title-container').hide();
+        }
+    });
+});
+        </script>
     </head>
 <body>
-	<header class="main-header cf">
-		<section class="nav-title">
+	<nav class="main-nav cf">
+		<div class="big-title">
 			<h1>
-				<a href="/#top">Erik Swan</a>
+				<a href="/#top">Erik Michael Swan</a>
 			</h1>
 			<p>
 				<a href="/#top">Writer, Web Designer</a>
 			</p>
-		</section>
-		<nav>
-			<ul class="main-menu">
+		</div>
+		<nav class="sub-nav cf">
+		    <div class="scroll-title-container">
+		        <a href="/#top" class="scroll-title">Erik Michael Swan</a>
+		    </div>
+			<ul class="buttons cf">
 				<li class="menu-button">
 					<a href="#">About</a>
 				</li><!--
@@ -41,7 +63,7 @@
 				</li>
 			</ul>
 		</nav>
-	</header>
+	</nav>
 	<section class="full-bg" id="top">
 		<p class="quote-top">
 			A really well made button-hole

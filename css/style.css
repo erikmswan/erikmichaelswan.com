@@ -31,6 +31,7 @@ Erik Swan
   100% { background: rgba(217, 100, 89, 1);}
 }
 
+
 /**** Reset ***/
     html, body, div, span, applet, object, iframe,
     h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -133,12 +134,7 @@ Erik Swan
 	form {
 		color:#fff;
 	}
-	
-	nav {
-		float:right;
-		margin-top:40px;
-		margin-right:20%;
-	}
+
 	
 	
 /*** Clearfix ***/
@@ -156,21 +152,27 @@ Erik Swan
 
 /*** Main Nav ***/
 	
-	.main-header {
+	.main-nav {
 		background: #8C4646;
 		padding: 20px 0 0 10%;
-		border-bottom:5px solid #F2AE72;
-		scroll:fixed;
+		border-bottom:5px solid #F2AE72;	
+        transition:.3s ease-in-out; 
 	}
 
-	.nav-title {
+	.big-title {
 		float:left;
 		padding-bottom:10px;
 	}
 	
-	.nav-title h1 {
+	.big-title h1 {
 		margin-left:-3.4px
 	}
+	
+	.buttons {
+        float:right;
+        margin-top:40px;
+        margin-right:20%;
+    }
 	
 	li.menu-button {
 		display:inline-block;
@@ -181,13 +183,34 @@ Erik Swan
 		padding: 8px 20px;
 	}
 	
-	li.menu-button:hover {
-		color:#D96459;
+	li.menu-button:hover, .scroll-title:hover {
 		animation-name: soft-appear;
 		animation-duration:.15s;
 		animation-timing-function:ease-in;
 		animation-fill-mode:forwards;
 	}
+	
+/*** Scroll Nav ***/
+
+.scroll-nav {
+    position:fixed;
+    width:100%;
+    padding: 0 !important;
+}
+.scroll-nav .buttons {
+    margin:0 20% 0 0 !important;
+}
+
+.scroll-title-container {
+    float:left;
+    margin-left:20%;
+}
+
+.scroll-title {
+    display:block;
+    padding: 8px 20px;
+}
+
 
 /*** Banner image with overlain quote styling ***/
     
