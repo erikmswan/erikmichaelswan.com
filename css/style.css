@@ -235,6 +235,7 @@ li.menu-button:hover, .scroll-title:hover {
     width:100%;
     background: url(images/Painting-Background.jpg) 50% 70% no-repeat;
     background-size: cover;
+    background-attachment:fixed;
 }
 
 .quote-top, .quote-mid, .quote-bottom {
