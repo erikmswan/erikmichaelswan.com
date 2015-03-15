@@ -16,26 +16,27 @@
         <link rel="stylesheet" type="text/css" href="css/style.css">
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
         <script type="text/javascript">
-$j=jQuery.noConflict();
-$j(document).ready(function() {    
-    var nav = $j('.main-nav');
+            $j=jQuery.noConflict();
+            $j(document).ready(function() {    
+                var nav = $j('.main-nav');
+                        $j('.scroll-title-container').hide();
+                $j(window).scroll(function () {
+                    if ($j(this).scrollTop() > 1) {
+                        nav.addClass("scroll-nav");
+            $j('.big-title').hide();
+            $j('.scroll-title-container').show();
+                    } else {
+                        nav.removeClass("scroll-nav");
+            $j('.big-title').show();
             $j('.scroll-title-container').hide();
-    $j(window).scroll(function () {
-        if ($j(this).scrollTop() > 50) {
-            nav.addClass("scroll-nav");
-$j('.big-title').hide();
-$j('.scroll-title-container').show();
-        } else {
-            nav.removeClass("scroll-nav");
-$j('.big-title').show();
-$j('.scroll-title-container').hide();
-        }
-    });
-});
+                    }
+                });
+            });
         </script>
+        
     </head>
 <body>
-	<nav class="main-nav cf">
+	<nav class="main-nav cf" id="main">
 		<div class="big-title">
 			<h1>
 				<a href="/#top">Erik Michael Swan</a>
@@ -64,6 +65,7 @@ $j('.scroll-title-container').hide();
 			</ul>
 		</nav>
 	</nav>
+	<div class="scroll-bump"></div>
 	<section class="full-bg" id="top">
 		<p class="quote-top">
 			A really well made button-hole
