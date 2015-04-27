@@ -505,7 +505,7 @@ li.menu-button:hover, .scroll-title:hover {
 	border-radius:10px;
 	-moz-box-sizing:border-box;
 	box-sizing:border-box;
-	margin: 10px 1.668%;
+	margin: 10px 1.66%;
 	position:relative;
 }
 
@@ -569,6 +569,13 @@ li.menu-button:hover, .scroll-title:hover {
 
 .list li {
 	margin-top:5px;
+}
+
+.disabled {
+	background: #595959;
+	border: 3px solid #c4c4c4;
+	color:#c4c4c4;
+	padding-bottom:6px;
 }
 
 /*** FOOTER ***/
