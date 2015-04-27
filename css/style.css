@@ -128,6 +128,7 @@ time, mark, audio, video {
 	font: inherit;
 	vertical-align: baseline;
 }
+
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure, 
 footer, header, hgroup, menu, nav, section {
@@ -295,7 +296,8 @@ li.menu-button:hover, .scroll-title:hover {
     z-index:1;
 }
 .scroll-nav .buttons {
-    margin:0 20% 0 0 !important;
+    margin:0 inherit 0 0 !important;
+    margin-top:0 !important;
 }
 
 .scroll-title-container {
@@ -362,7 +364,7 @@ li.menu-button:hover, .scroll-title:hover {
 	height:900px;
 }
 
-.content, .cambridge, .berkeley {
+.content {
     width:60%;
     margin-left:auto;
     margin-right:auto;
@@ -580,11 +582,6 @@ li.menu-button:hover, .scroll-title:hover {
 
 /*** FOOTER ***/
 
-.copyright {
-	font-size:.7em;
-	padding-bottom:30px;
-}
-
 .big-footer {
 	font-size:5em;
 }
@@ -608,4 +605,179 @@ li.menu-button:hover, .scroll-title:hover {
 	-moz-box-shadow: 0px 0px 8px 0px rgba(242,174,114,1);
 	box-shadow: 0px 0px 8px 0px rgba(242,174,114,1);
 	border-radius:50%;
+}
+
+.copyright {
+	font-size:.7em;
+	padding-bottom:30px;
+}
+
+
+/* 
+ * 
+ * MOBILE-FRIENDLY MEDIA QUERIES
+ * 
+ */
+
+
+@media screen and (max-width: 1035px) {
+	
+	/* Generic Elements */
+	h1 {
+		font-size: 1.5em;
+	}
+	
+	/* Nav */
+	.buttons {
+		margin: 1em 15% 0 0;
+	}
+	
+	.scroll-title-container {
+		margin-left:15%;
+	}
+	
+	/* Wedges & Backgrounds */
+	.content {
+		width:80%;
+	}
+	.group-bg, .forest-bg {
+		height:100vh;
+		background-position: 55% 35%;
+	}
+	
+	/* Quote */
+	.quote-top {
+		font-size:2em;
+	}
+	
+	.quote-mid {
+		font-size:1.8em;
+	}
+	
+	.quote-bottom {
+		font-size:3em;
+	}
+	
+	.quote-attribution {
+		font-size: 1.5em;
+		margin-right:15%;
+	}
+	
+	/* Intro */
+	.portrait {
+		left:50%;
+		margin-left:-102px;
+		top:-190px;
+	}
+	
+	.intro-wrap {
+		margin-top:12em;
+		margin-bottom:2em;
+	}
+	
+	/* Education */
+	.ucb-seal {
+		margin-top:-120px;
+		margin-left:-190px;
+	}
+	
+	.berkeley {
+		margin-top:11em;
+	}
+	
+	.cam-seal {
+		margin-right:-155px;
+		margin-top:-150px;	
+	}
+	
+	.cambridge {
+		margin-top:11em;
+	}
+}
+
+@media screen and (max-width:770px) {
+	
+	/* Nav */
+	.main-nav {
+		text-align:center;
+	}
+	
+	.big-title {
+		margin-left:auto;
+		margin-right:auto;
+		float:none;
+	}
+	
+	.buttons {
+		display:block;
+		margin: 0 auto 0 auto;
+		float:none;
+	}
+	
+	.scroll-nav, .buttons {
+		margin-right:auto;
+	}
+	
+	.scroll-title-container{
+		margin-left:10%;
+	}
+	
+	/* Quote */
+	.quote-top {
+		font-size:1.6em;
+	}
+	
+	.quote-mid {
+		font-size:1.5em;
+	}
+	
+	.quote-bottom {
+		font-size:2.3em;
+	}
+	
+	.quote-attribution {
+		font-size: 1.2em;
+		margin-right:15%;
+	}
+	
+	/* Portfolio */
+	.w1-3 {
+		width:100%;
+		margin-bottom:2em;
+	}
+}
+
+@media screen and (max-width:560px) {
+	/* Nav */
+	.main-nav {
+		text-align:center;
+	}
+	
+	.big-title {
+		margin-left:auto;
+		margin-right:auto;
+		float:none;
+	}
+	
+	.buttons {
+		display:none;
+	}
+	
+	.scroll-title-container {
+		margin: 0 auto 0 auto;
+		float:none;
+	}
+	
+	/* Education */
+	.ucb-seal {
+		margin-top:-110px;
+	}
+}
+
+@media screen and (max-device-width:480px) {
+	
+	/* Wedges & Backgrounds */
+	.content {
+		width:90%;
+	}
 }
