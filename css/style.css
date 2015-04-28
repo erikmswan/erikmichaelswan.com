@@ -356,6 +356,9 @@ li.menu-button:hover, .scroll-title:hover {
 }
 
 .painting-bg, .group-bg, .forest-bg {
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
 	background-size:cover;
 	background-attachment:fixed;
 }
@@ -724,15 +727,15 @@ li.menu-button:hover, .scroll-title:hover {
 	
 	/* Quote */
 	.quote-top {
-		font-size:1.6em;
+		font-size:1.2em;
 	}
 	
 	.quote-mid {
-		font-size:1.5em;
+		font-size:1em;
 	}
 	
 	.quote-bottom {
-		font-size:2.3em;
+		font-size:2em;
 	}
 	
 	.quote-attribution {
@@ -770,11 +773,16 @@ li.menu-button:hover, .scroll-title:hover {
 	
 	/* Education */
 	.ucb-seal {
-		margin-top:-110px;
+		margin-top:-100px;
+		margin-left:-180px;
 	}
 }
 
-@media screen and (max-device-width:480px) {
+@media screen and (max-width:480px) {
+	
+	.painting-bg, .forest-bg, .group-bg {
+		background-size:cover;
+	}
 	
 	/* Wedges & Backgrounds */
 	.content {
