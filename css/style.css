@@ -462,7 +462,7 @@ li.menu-button:hover, .scroll-title:hover {
 .row {
 	box-sizing:border-box;
 	width:100%;
-	margin: 15px auto 0;
+	margin: 35px auto 0;
 }
 
 .w1-3 {
@@ -483,10 +483,19 @@ li.menu-button:hover, .scroll-title:hover {
 	margin-right:0;
 }
 
+.w1-3:nth-of-type(1):nth-last-of-type(3),
+.w1-3:nth-of-type(1):nth-last-of-type(2) {
+	margin-left: 18%;
+}
+
 .w1-3:hover {
 	-webkit-box-shadow: 0px 0px 8px 0px rgba(242,227,148,1);
 	-moz-box-shadow: 0px 0px 8px 0px rgba(242,227,148,1);
 	box-shadow: 0px 0px 8px 0px rgba(242,227,148,1);
+}
+
+.w1-3 a {
+	text-decoration:underline;
 }
 
 .card-center {
@@ -751,6 +760,11 @@ center;
 	.w1-3 {
 		width:100%;
 		margin-bottom:2em;
+	}
+	
+	.w1-3:nth-of-type(1):nth-last-of-type(3),
+	.w1-3:nth-of-type(1):nth-last-of-type(2) {
+		margin-left: 0;
 	}
 }
 
