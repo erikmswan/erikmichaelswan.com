@@ -13,6 +13,10 @@
         -->
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta prefix="og: http://ogp.me/ns#" property="og:title" content="Erik Michael Swan" />
+		<meta prefix="og: http://ogp.me/ns#" property="og:description" content="My responsive online resume and portfolio." />
+		<meta prefix="og: http://ogp.me/ns#" property="og:image" content="css/images/forest_small.jpg" />
+		<meta prefix="og: http://ogp.me/ns#" property="og:url" content="http://erikmichaelswan.com" />
         <title>erikmichaelswan.com</title>
         <link rel="stylesheet" type="text/css" href="css/style.css">
         <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
@@ -25,7 +29,7 @@
 				Erik Michael Swan
 			</h1>
 			<p>
-				Writer, Web Designer
+				Front End Web Developer, Writer
 			</p>
 		</div>
 		<!--Sub nav becomes Scroll nav-->
@@ -73,13 +77,20 @@
 		    <p class="intro">
 		        <span class="big">Hi,</span>
 		        <br>
-		        My name is Erik Michael Swan. While honing my writing skills, I discovered a love for websites. Now I combine these skills to develop compelling websites supported by first-tier written and oral communication skills.
+		        My name is Erik Michael Swan. While honing my 
+writing skills, I discovered a love for websites. Now, I combine these 
+skills to develop compelling websites supported by top-tier written and 
+oral communication skills.
 			</p>
 			<p class="intro">
-				I have a reputation for being able to tackle any project because of my ability to learn quickly. My background also gives me a holistic and flexible perspective that I leverage to the fullest to provide top-shelf work.
+				I have a reputation for being able to 
+tackle any project because of my ability to learn quickly. My background 
+also gives me a holistic and flexible perspective that I leverage to the 
+fullest to do excellent work.
 		    </p>
 		    <p class="intro">
-		    	Below you will find a summary of my education and my portfolio to see some of the things I can deliver.
+		    	Below, you will find a summary of my education 
+and my portfolio to see some of the things I can deliver.
 		    </p>
 		    <img src="css/images/separator-icon2.svg" class="separator">
 		</div>
@@ -102,8 +113,8 @@
 					<br><strong>GPA: 3.91 (High Distinction)</strong>
 					<br>
 					<br><em>Honors:</em>
-					<br>Awarded H.W. Hill scholarship in 2014 for "Exceptional work of the highest calibur." 
-					<br>Four to six awarded annually by faculty nomination.
+					<br>Awarded H.W. Hill 
+scholarship in 2014 for "exceptional work of the highest calibur." Four to six awarded annually by faculty nomination.
 					<br>
 					<br>Inducted into Phi Beta Kappa, Alpha of California chapter in 2014.
 				</p>
@@ -131,7 +142,11 @@
 				Portfolio
 			</h1>
 			<p class="section-title">
-				For more detailed information on my work history and responsibilities, <a href="https://www.linkedin.com/in/erikmichaelswan" target="_blank" class="link">visit my LinkedIn profile</a>.
+				For more detailed information on my work 
+history and responsibilities, <a 
+href="https://www.linkedin.com/in/erikmichaelswan" 
+alt="Erik Michael Swan" target="_blank" 
+class="link">please visit my LinkedIn profile</a>.
 			</p>
 			<h4>
 				Web
@@ -396,35 +411,59 @@ src="css/images/WineCard.jpg" class="port-img"></a>
 	
 	<!--Scroll-nav-->
  	<script type="text/javascript">
-        $j=jQuery.noConflict();
-        $j(document).ready(function() {    
-            var nav = $j('.main-nav');
-                    $j('.scroll-title-container').hide();
-            $j(window).scroll(function () {
-                if ($j(this).scrollTop() > 1) {
-                    nav.addClass("scroll-nav");
-        $j('.big-title').hide();
-        $j('.scroll-title-container').show();
-                } else {
-                    nav.removeClass("scroll-nav");
-        $j('.big-title').show();
-        $j('.scroll-title-container').hide();
-                }
-            });
-        });
-        
-        $j(window).scroll(function() {    
-	    var scroll = $j(window).scrollTop();
-	    if (scroll >= 250) {
-	        $j(".intro-wrap").addClass("fadein", 1000);
-	    }
-	    if (scroll >= 1600) {
-	    	$j(".berkeley").addClass("fadeleft", 1000);
-	    }
-	    if (scroll >= 1900) {
-	    	$j(".cambridge").addClass("faderight", 1000);
-	    }
+	$(document).ready(function() {    
+		
+		// Scroll-nav class switch
+		var nav = $('.main-nav');
+		$('.scroll-title-container').hide();
+
+		$(window).scroll(function () {
+			if ($(this).scrollTop() > 1) {
+				nav.addClass("scroll-nav");
+				$('.big-title').hide();
+				$('.scroll-title-container').show();
+			} else {
+				nav.removeClass("scroll-nav");
+				$('.big-title').show();
+				$('.scroll-title-container').hide();
+			}
 		});
+        
+		// Animation on scroll
+		$(window).scroll(function() {    
+			var scroll = $(window).scrollTop();
+			
+			if (scroll >= 250) {
+				$(".intro-wrap").addClass("fade-up");
+			} else {
+				$(".intro-wrap").removeClass("fade-up");
+			}
+			 // mobile
+			if (scroll >= 1500) {
+				$(".berkeley").addClass("mob-fade-left");
+			} else {
+				$(".berkeley").removeClass("mob-fade-left");
+			} 
+			 
+			// Berkeley desktop -- Cambridge mobile
+			if (scroll >= 1900) {
+				$(".berkeley").addClass("fade-left");
+				$(".cambridge").addClass("mob-fade-right");
+			} else {
+				$(".berkeley").removeClass("fade-left");
+				$(".cambridge").removeClass("mob-fade-right");
+			}
+			
+			// desktop
+			if (scroll >= 2090) {
+				$(".cambridge").addClass("fade-right");
+			} else {
+				$(".cambridge").removeClass("fade-right");
+			}
+		});
+	});
+        
+
     </script>
     <!--Google Analytics-->
     <script>
