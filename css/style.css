@@ -121,6 +121,10 @@ table {
     clear: both;
 }
 
+.clear-both {
+	clear:both;
+}
+
 
 /**** GENERIC ELEMENTS ***/
 
@@ -153,7 +157,7 @@ h3 {
 h4 {
 	font-size:1.9em;
 	text-align:center;
-	margin-top:50px;
+	margin-top:90px;
 	margin-bottom:30px;
 }
 
@@ -449,6 +453,18 @@ li.menu-button:hover, .scroll-title:hover {
 
 /*** PORTFOLIO ***/
 
+#portfolio .content {
+	margin:0;
+	width:100%;
+	max-width:1280px;
+}
+
+.row {
+	box-sizing:border-box;
+	width:100%;
+	margin: 15px auto 0;
+}
+
 .w1-3 {
 	width:30%;
 	float:left;
@@ -457,8 +473,14 @@ li.menu-button:hover, .scroll-title:hover {
 	border-radius:10px;
 	-moz-box-sizing:border-box;
 	box-sizing:border-box;
-	margin: 10px 1.66%;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	margin-right:4.5%;
 	position:relative;
+}
+
+.w1-3:nth-of-type(3) {
+	margin-right:0;
 }
 
 .w1-3:hover {
@@ -476,11 +498,23 @@ li.menu-button:hover, .scroll-title:hover {
 .plat-icon, .tumblr-icon, .wp-icon {
 	width:35px;
 	position:absolute;
-	left:43%;
+	left:50%;
+	margin-left:-17.5px;
 }
 
 .plat-icon {
 	top:-25px;
+}
+
+.c5 {
+	top: -35px;
+	width: 57px;
+	margin-left: -26px;
+}
+
+.html5 {
+	width:40px;
+	margin-left:-20px;
 }
 
 .tumblr-icon {
@@ -499,14 +533,16 @@ li.menu-button:hover, .scroll-title:hover {
 }
 
 .port-title {
-	margin:8px 3px;
+	margin: 19px 3px;
 	padding-top:10px;
 	font-weight:bold;
+	font-size:1.8em;
+	line-height:1em;
 }
 .port-img {
 	width:90%;
-	border: 3px solid #E8E8E8;
-	border-radius:10px;
+	box-shadow: 0 0 16px -3px #000;
+	border-radius:7px;
 	display:block;
 	margin-left:auto;
 	margin-right:auto;
@@ -515,12 +551,12 @@ li.menu-button:hover, .scroll-title:hover {
 .list {
 	list-style:circle inside;
 	color:#fff;
-	line-height:1.1em;
-	margin:0 8px 8px 8px;
+	line-height:1.15em;
+	margin:0 12px 12px;
 }
 
 .list li {
-	margin-top:5px;
+	margin-top:13px;
 }
 
 .disabled {
@@ -689,6 +725,9 @@ li.menu-button:hover, .scroll-title:hover {
 center;
 	}
 	
+	.painting-bg, .group-bg, .forest-bg {
+		background-size:cover;
+	}
 
 	/* Quote */
 	.quote-top {
