@@ -689,17 +689,6 @@ li.menu-button:hover, .scroll-title:hover {
 center;
 	}
 	
-	/* Transitions */
-	
-	.mob-fade-left {
-		left:0;
-		opacity:1;
-	}
-
-	.mob-fade-right {
-		right:0;
-		opacity:1;
-	}
 
 	/* Quote */
 	.quote-top {

@@ -438,24 +438,16 @@ src="css/images/WineCard.jpg" class="port-img"></a>
 			} else {
 				$(".intro-wrap").removeClass("fade-up");
 			}
-			 // mobile
+			
+			 // Berkeley reveal
 			if (scroll >= 1500) {
-				$(".berkeley").addClass("mob-fade-left");
-			} else {
-				$(".berkeley").removeClass("mob-fade-left");
-			} 
-			 
-			// Berkeley desktop -- Cambridge mobile
-			if (scroll >= 1900) {
 				$(".berkeley").addClass("fade-left");
-				$(".cambridge").addClass("mob-fade-right");
 			} else {
 				$(".berkeley").removeClass("fade-left");
-				$(".cambridge").removeClass("mob-fade-right");
-			}
-			
-			// desktop
-			if (scroll >= 2090) {
+			} 
+			 
+			// Cambridge Reveal
+			if (scroll >= 1700) {
 				$(".cambridge").addClass("fade-right");
 			} else {
 				$(".cambridge").removeClass("fade-right");
