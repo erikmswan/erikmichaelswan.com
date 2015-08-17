@@ -65,6 +65,35 @@ Erik Michael Swan
     to   { opacity: 1; right: 0px; }
 }
 
+/* Safari, Chrome and Opera > 12.1 */
+@-webkit-keyframes fadeleft {
+	from { left: 100px; }
+	to   { left: 0px; opacity: 1;}
+}
+@-webkit-keyframes faderight {
+	from { right: 100px; }
+	to   { right: 0px; opacity: 1; }
+}
+
+/* Internet Explorer */
+@-ms-keyframes fadeleft {
+	from { left: 100px; }
+	to   { left: 0px; opacity: 1;}
+}
+@-ms-keyframes faderight {
+	from { right: 100px; }
+	to   { right: 0px; opacity: 1; }
+}
+
+@keyframes fadeleft {
+    from { left: 100px; }
+    to   { opacity: 1; left: 0px; }
+}
+@keyframes faderight {
+    from { right: 100px; }
+    to   { opacity: 1; right: 0px; }
+}
+
 
 /**** RESET ***/
 
@@ -499,6 +528,16 @@ span.quote-bottom-4 {
 
 .cambridge {
 	right:100px;
+}
+
+.fade-left {
+	left:0;
+	opacity:1;
+}
+
+.fade-right {
+	right:0;
+	opacity:1;
 }
 	
 .ucb-seal {
