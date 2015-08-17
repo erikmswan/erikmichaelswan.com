@@ -750,57 +750,13 @@ span.quote-bottom-4 {
 	
 	/* Quote */
 	.quote-top {
-    font-size:3em;
-    line-height:1.1em;
-    padding-top:19vh;
-}
-
-.quote-top-1 {
-	font-size:0.91em;
-}
-.quote-top-2 {
-	font-size:1.6em;
-	line-height:1em;
-	word-spacing:-0.24em;
-	letter-spacing:0.16em;
-}
-.quote-top-3 {
-	font-family:consolas;
-	font-size:0.52em;
-	word-spacing:-0.1em;
-}
-.quote-top-4 {
-	font-size:0.8em;
-	letter-spacing:0.3em;
-}
-
-.quote-bottom {
-    font-size:2.1em;
-    line-height:1.1em;
-    padding-top:7vh;
-}
-
-.quote-bottom-1 {
-	font-size:0.91em;
-}
-.quote-bottom-2 {
-	font-size:1.6em;
-	line-height:1em;
-	word-spacing:-0.24em;
-	letter-spacing:0.16em;
-}
-.quote-bottom-3 {
-	font-size:0.52em;
-	word-spacing:-0.1em;
-}
-.quote-bottom-4 {
-	font-size:0.8em;
-	letter-spacing:0.3em;
-}
+		font-size:2.5em;
+		padding-top:33vh;
+	}
 	
-	.quote-attribution {
-		font-size: 1.5em;
-		margin-right:15%;
+	.quote-bottom {
+		font-size: 1.8em;
+		padding-top:5vh;
 	}
 	
 	/* Intro */
@@ -832,6 +788,12 @@ span.quote-bottom-4 {
 	
 	.cambridge {
 		margin-top:11em;
+	}
+}
+
+@media only screen and (max-width:830px) {
+	.buttons {
+		margin-right:11%;
 	}
 }
 
