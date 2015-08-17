@@ -46,54 +46,6 @@ Erik Michael Swan
     to   { opacity: 1; }
 }
 
-/* Fadein, Faderight, Fadeleft */
-	
-/* Safari, Chrome and Opera > 12.1 */
-@-webkit-keyframes fadein {
-	from { left: 100px; }
-	to   { left: 0px; opacity: 1;}
-}
-
-/* Internet Explorer */
-@-ms-keyframes fadein {
-	from { left: 100px; }
-	to   { left: 0px; opacity: 1;}
-}
-
-@keyframes fadein {
-    from { right: 100px; }
-    to   { opacity: 1; right: 0px; }
-}
-
-/* Safari, Chrome and Opera > 12.1 */
-@-webkit-keyframes fadeleft {
-	from { left: 100px; }
-	to   { left: 0px; opacity: 1;}
-}
-@-webkit-keyframes faderight {
-	from { right: 100px; }
-	to   { right: 0px; opacity: 1; }
-}
-
-/* Internet Explorer */
-@-ms-keyframes fadeleft {
-	from { left: 100px; }
-	to   { left: 0px; opacity: 1;}
-}
-@-ms-keyframes faderight {
-	from { right: 100px; }
-	to   { right: 0px; opacity: 1; }
-}
-
-@keyframes fadeleft {
-    from { left: 100px; }
-    to   { opacity: 1; left: 0px; }
-}
-@keyframes faderight {
-    from { right: 100px; }
-    to   { opacity: 1; right: 0px; }
-}
-
 
 /**** RESET ***/
 
@@ -354,7 +306,6 @@ li.menu-button:hover, .scroll-title:hover {
 }
 
 .painting-bg, .group-bg, .forest-bg, .mob {
-	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;
 	background-size:cover;
@@ -491,11 +442,6 @@ span.quote-bottom-4 {
 	transition: all 0.3s ease-out;
 }
 
-.fade-up {
-	top:0;
-	opacity:1;
-}
-
 .big {
 	font-size:2.5em;
 	color: #e8e8e8; 
@@ -529,16 +475,6 @@ span.quote-bottom-4 {
 
 .cambridge {
 	right:100px;
-}
-
-.fade-left {
-	left:0;
-	opacity:1;
-}
-
-.fade-right {
-	right:0;
-	opacity:1;
 }
 	
 .ucb-seal {
@@ -600,7 +536,6 @@ span.quote-bottom-4 {
 }
 
 .w1-3:hover {
-	-webkit-box-shadow: 0px 0px 8px 0px rgba(242,227,148,1);
 	-moz-box-shadow: 0px 0px 8px 0px rgba(242,227,148,1);
 	box-shadow: 0px 0px 8px 0px rgba(242,227,148,1);
 }
@@ -707,7 +642,6 @@ span.quote-bottom-4 {
 }
 
 .icon:hover {
-	-webkit-box-shadow: 0px 0px 8px 0px rgba(242,174,114,1);
 	-moz-box-shadow: 0px 0px 8px 0px rgba(242,174,114,1);
 	box-shadow: 0px 0px 8px 0px rgba(242,174,114,1);
 	border-radius:50%;
