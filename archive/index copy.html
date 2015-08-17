@@ -18,7 +18,6 @@
         <link rel="stylesheet" type="text/css" href="css/style.css">
         
         <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
-        <script src="js/main.js"></script>
     </head>
 <body>
 	<!--Nav Container-->
@@ -54,22 +53,19 @@
 	</nav>
 	<!--Quote-->
 	<section class="painting-bg" id="top">
-		<p class="quote-top quoteFadeIn">
-			<span class="quote-top-1">In all <span class="quote-top-bold">unimportant</span> matters,</span>
-			<br>
-			<span class="quote-top-2">STYLE, </span><span class="quote-top-3">not sincerity</span>
-			<br>
-			<span class="quote-top-4">is the essential.</span>
+		<p class="quote-top">
+			A really well made button-hole
 		</p>
-		<p class="quote-bottom quoteFadeIn">
-			<span class="quote-bottom-1">In all <span class="quote-bottom-bold">important</span> matters,</span>
-			<br>
-			<span class="quote-bottom-2">STYLE, </span><span class="quote-bottom-3">not sincerity</span>
-			<br>
-			<span class="quote-bottom-4">is the essential.</span>
+		<p class="quote-mid">
+			is the only link
+		<br />
+			between
 		</p>
-		<p class="quote-attribution quoteFadeIn">
-			<span class="quote-attribution-1">- Oscar Wilde</span>
+		<p class="quote-bottom">
+			Art and Nature.
+		</p>
+		<p class="quote-attribution">
+			- Oscar Wilde
 		</p>
 	</section>
 	<!--Intro-->
@@ -79,13 +75,20 @@
 		    <p class="intro">
 		        <span class="big">Hi,</span>
 		        <br>
-		        My name is Erik Michael Swan. While honing my writing skills, I discovered a love for websites. Now, I combine these skills to develop compelling websites supported by top-tier written and oral communication skills.
+		        My name is Erik Michael Swan. While honing my 
+writing skills, I discovered a love for websites. Now, I combine these 
+skills to develop compelling websites supported by top-tier written and 
+oral communication skills.
 			</p>
 			<p class="intro">
-				I have a reputation for being able to tackle any project because of my ability to learn quickly. My background also gives me a holistic and flexible perspective that I leverage to the fullest to do excellent work.
+				I have a reputation for being able to 
+tackle any project because of my ability to learn quickly. My background 
+also gives me a holistic and flexible perspective that I leverage to the 
+fullest to do excellent work.
 		    </p>
 		    <p class="intro">
-		    	Below, you will find a summary of my education and my portfolio to see some of the things I can deliver.
+		    	Below, you will find a summary of my education 
+and my portfolio to see some of the things I can deliver.
 		    </p>
 		    <img src="css/images/separator-icon2.svg" class="separator">
 		</div>
@@ -444,7 +447,55 @@ class="link">please visit my LinkedIn profile</a>.
 			
 		</p>
 	</footer>
+	
+	<!--Scroll-nav-->
+ 	<script type="text/javascript">
+	$(document).ready(function() {    
+		
+		// Scroll-nav class switch
+		var nav = $('.main-nav');
+		$('.scroll-title-container').hide();
 
+		$(window).scroll(function () {
+			if ($(this).scrollTop() > 1) {
+				nav.addClass("scroll-nav");
+				$('.big-title').hide();
+				$('.scroll-title-container').show();
+			} else {
+				nav.removeClass("scroll-nav");
+				$('.big-title').show();
+				$('.scroll-title-container').hide();
+			}
+		});
+        
+		// Animation on scroll
+		$(window).scroll(function() {    
+			var scroll = $(window).scrollTop();
+			
+			if (scroll >= 250) {
+				$(".intro-wrap").addClass("fade-up");
+			} else {
+				$(".intro-wrap").removeClass("fade-up");
+			}
+			
+			 // Berkeley reveal
+			if (scroll >= 1500) {
+				$(".berkeley").addClass("fade-left");
+			} else {
+				$(".berkeley").removeClass("fade-left");
+			} 
+			 
+			// Cambridge Reveal
+			if (scroll >= 1700) {
+				$(".cambridge").addClass("fade-right");
+			} else {
+				$(".cambridge").removeClass("fade-right");
+			}
+		});
+	});
+        
+
+    </script>
     <!--Google Analytics-->
     <script>
 	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){

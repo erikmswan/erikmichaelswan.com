@@ -23,10 +23,47 @@ Erik Michael Swan
 /*** IMPORTS ***/
 
 @import url(http://fonts.googleapis.com/css?family=Roboto:400,300,300italic,400italic,700,700italic);
+@import url(http://fonts.googleapis.com/css?family=Amatic+SC);
 
 /*** KEYFRAMES ***/
 
-	/* Fadein, Faderight, Fadeleft */
+/* Quotefade */
+
+/* Safari, Chrome and Opera > 12.1 */
+@-webkit-keyframes quoteFadeIn {
+	from { opacity:0; }
+    to   { opacity: 1; }
+}
+
+/* Internet Explorer */
+@-ms-keyframes quoteFadeIn {
+	from { opacity:0; }
+    to   { opacity: 1; }
+}
+
+@keyframes quoteFadeIn {
+    from { opacity:0; }
+    to   { opacity: 1; }
+}
+
+/* Fadein, Faderight, Fadeleft */
+	
+/* Safari, Chrome and Opera > 12.1 */
+@-webkit-keyframes fadein {
+	from { left: 100px; }
+	to   { left: 0px; opacity: 1;}
+}
+
+/* Internet Explorer */
+@-ms-keyframes fadein {
+	from { left: 100px; }
+	to   { left: 0px; opacity: 1;}
+}
+
+@keyframes fadein {
+    from { right: 100px; }
+    to   { opacity: 1; right: 0px; }
+}
 
 /* Safari, Chrome and Opera > 12.1 */
 @-webkit-keyframes fadeleft {
@@ -47,7 +84,6 @@ Erik Michael Swan
 	from { right: 100px; }
 	to   { right: 0px; opacity: 1; }
 }
-
 
 @keyframes fadeleft {
     from { left: 100px; }
@@ -338,24 +374,96 @@ li.menu-button:hover, .scroll-title:hover {
 
 /*** QUOTE ***/
 
+.quoteFadeIn span {
+	-webkit-animation: quoteFadeIn 2s 0.3s forwards;
+	animation: quoteFadeIn 2s 0.3s forwards;
+}
+
 .quote-top, .quote-mid, .quote-bottom, .section-title {
     text-align:center;
 }
-
-.quote-top {
-    font-size:3.5em;
-    line-height:30vh;
-    padding-top:100px;
+.quote-top span, .quote-bottom span, .quote-attribution span {
+	opacity:0;
 }
 
-.quote-mid {
-    font-size:2.5em;
-    line-height:6vh;
+.quote-top {
+    font-size:3em;
+    line-height:0.7em;
+    padding-top:27vh;
+}
+
+span.quote-top-1 {
+	font-size:0.91em;
+	letter-spacing:-0.02em;
+	word-spacing:0.04em;
+}
+
+span.quote-top-bold {
+	font-weight:bold;
+	letter-spacing:0em;
+	-webkit-animation-delay: 0.7s;
+	animation-delay: 0.7s;
+}
+
+span.quote-top-2 {
+	font-family: 'Amatic SC', cursive;
+	font-size:2.6em;
+	line-height:1em;
+	word-spacing:-0.24em;
+	letter-spacing:0.16em;
+	-webkit-animation-delay: 1.5s;
+	animation-delay: 1.5s;
+}
+span.quote-top-3 {
+	font-family:"Courier New", Courier, monospace;
+	font-size:0.52em;
+	word-spacing:-0.1em;
+	-webkit-animation-delay: 2s;
+	animation-delay: 2s;
+}
+span.quote-top-4 {
+	font-size:0.8em;
+	letter-spacing:0.4em;
+	-webkit-animation-delay: 2.8s;
+	animation-delay: 2.8s;
 }
 
 .quote-bottom {
-    font-size:5em;
-    line-height:30vh;
+    font-size:02em;
+    line-height:0.7em;
+    padding-top:10vh;
+}
+
+.quote-bottom span {
+	-webkit-animation-delay: 4.2s;
+	animation-delay: 4.2s;
+}
+
+span.quote-bottom-bold {
+	font-weight:bold;
+	letter-spacing:0em;
+	-webkit-animation-delay: 5s;
+	animation-delay: 5s;
+}
+span.quote-bottom-1 {
+	font-size:0.9em;
+	letter-spacing:-0.01em;
+}
+span.quote-bottom-2 {
+	font-family: 'Amatic SC', cursive;
+	font-size:2.1em;
+	line-height:1em;
+	word-spacing:-0.24em;
+	letter-spacing:0.17em;
+}
+span.quote-bottom-3 {
+	font-family:"Courier New", Courier, monospace;
+	font-size:0.52em;
+	word-spacing:-0.1em;
+}
+span.quote-bottom-4 {
+	font-size:0.8em;
+	letter-spacing:0.31em;
 }
 
 .quote-attribution {
@@ -363,11 +471,14 @@ li.menu-button:hover, .scroll-title:hover {
     font-style:italic;
     font-size:2.5em;
     line-height:15vh;
-    margin-right:30%;
-    margin-top:-50px;
-    
+    margin-right:10%;
+    margin-top:-1vh;
 }
 
+.quote-attribution span {
+	-webkit-animation-delay: 6.3s;
+	animation-delay: 6.3s;
+}
 
 /*** INTRO ***/
 
@@ -642,16 +753,53 @@ li.menu-button:hover, .scroll-title:hover {
 	
 	/* Quote */
 	.quote-top {
-		font-size:2em;
-	}
-	
-	.quote-mid {
-		font-size:1.8em;
-	}
-	
-	.quote-bottom {
-		font-size:3em;
-	}
+    font-size:3em;
+    line-height:1.1em;
+    padding-top:19vh;
+}
+
+.quote-top-1 {
+	font-size:0.91em;
+}
+.quote-top-2 {
+	font-size:1.6em;
+	line-height:1em;
+	word-spacing:-0.24em;
+	letter-spacing:0.16em;
+}
+.quote-top-3 {
+	font-family:consolas;
+	font-size:0.52em;
+	word-spacing:-0.1em;
+}
+.quote-top-4 {
+	font-size:0.8em;
+	letter-spacing:0.3em;
+}
+
+.quote-bottom {
+    font-size:2.1em;
+    line-height:1.1em;
+    padding-top:7vh;
+}
+
+.quote-bottom-1 {
+	font-size:0.91em;
+}
+.quote-bottom-2 {
+	font-size:1.6em;
+	line-height:1em;
+	word-spacing:-0.24em;
+	letter-spacing:0.16em;
+}
+.quote-bottom-3 {
+	font-size:0.52em;
+	word-spacing:-0.1em;
+}
+.quote-bottom-4 {
+	font-size:0.8em;
+	letter-spacing:0.3em;
+}
 	
 	.quote-attribution {
 		font-size: 1.5em;
