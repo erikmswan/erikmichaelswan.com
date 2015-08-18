@@ -409,7 +409,7 @@ span.quote-top-2 {
 	font-size:2.6em;
 	line-height:1em;
 	word-spacing:-0.24em;
-	letter-spacing:0.16em;
+	letter-spacing:0.15em;
 	-webkit-animation-delay: 1.5s;
 	animation-delay: 1.5s;
 }
@@ -453,7 +453,7 @@ span.quote-bottom-2 {
 	font-size:2.1em;
 	line-height:1em;
 	word-spacing:-0.24em;
-	letter-spacing:0.17em;
+	letter-spacing:0.15em;
 }
 span.quote-bottom-3 {
 	font-family:"Courier New", Courier, monospace;
@@ -515,6 +515,10 @@ span.quote-bottom-4 {
 
 	
 /*** EDUCATION ***/
+
+#education {
+	overflow:hidden;
+}
 
 .berkeley, .cambridge {
 	position:relative;

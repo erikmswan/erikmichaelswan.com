@@ -1,0 +1,134 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Tic Tac Toe</title>
+        <link rel="stylesheet" type="text/css" href="main.css">
+    </head>
+    <body>
+    	<div id="main-content">
+    		
+    		<!-- Title -->
+	        <h1 id="title">Tic Tac Toe</h1>
+	        
+			<!-- tic tac toe (ttt) container -->
+			<div id="ttt-container">
+				
+				<!-- Line containers -->
+				<!-- Vertical -->
+				<div class="line-container-vt">
+					<div class="line vt 1">&nbsp;</div>
+					<div class="line vt 2">&nbsp;</div>
+				</div>
+				<!-- end vertical -->
+				
+				<!-- Horizontal -->
+				<div class="line-container-hz">
+					<div class="line hz 3">&nbsp;</div>
+					<div class="line hz 4">&nbsp;</div>
+				</div>
+				<!-- end horizontal -->
+				<!-- end line containers -->
+				
+				<!-- ttt row -->
+				<div class="ttt-row">
+					<div class="ttt-cell">
+						<div id="0" class="button">&nbsp;</div>
+						<div class="o hide">&nbsp;</div>
+						<div class="x hide">&nbsp;</div>
+					</div>
+					<div class="ttt-cell">
+						<div id="1" class="button">&nbsp;</div>
+						<div class="o hide">&nbsp;</div>
+						<div class="x hide">&nbsp;</div>
+					</div>
+					<div class="ttt-cell">
+						<div id="2" class="button">&nbsp;</div>
+						<div class="o hide">&nbsp;</div>
+						<div class="x hide">&nbsp;</div>
+					</div>	
+				</div>
+				<!-- end ttt row -->
+				
+				<!-- ttt row -->
+				<div class="ttt-row">
+					<div class="ttt-cell">
+						<div id="3" class="button">&nbsp;</div>
+						<div class="o hide">&nbsp;</div>
+						<div class="x hide">&nbsp;</div>
+					</div>
+					<div class="ttt-cell">
+						<div id="4" class="button">&nbsp;</div>
+						<div class="o hide">&nbsp;</div>
+						<div class="x hide">&nbsp;</div>
+					</div>
+					<div class="ttt-cell">
+						<div id="5" class="button">&nbsp;</div>
+						<div class="o hide">&nbsp;</div>
+						<div class="x hide">&nbsp;</div>
+					</div>	
+				</div>
+				<!-- end ttt row -->
+				
+				<!-- ttt row -->
+				<div class="ttt-row">
+					<div class="ttt-cell">
+						<div id="6" class="button">&nbsp;</div>
+						<div class="o hide">&nbsp;</div>
+						<div class="x hide">&nbsp;</div>
+					</div>
+					<div class="ttt-cell">
+						<div id="7" class="button">&nbsp;</div>
+						<div class="o hide">&nbsp;</div>
+						<div class="x hide">&nbsp;</div>
+					</div>
+					<div class="ttt-cell">
+						<div id="8" class="button">&nbsp;</div>
+						<div class="o hide">&nbsp;</div>
+						<div class="x hide">&nbsp;</div>
+					</div>	
+				</div>
+				<!-- end ttt row -->
+				
+			</div>
+			
+			<!-- Left column container -->
+			<div id="left-column">
+				
+				<!-- Relative positioned box -->
+				<div id="left-column-relative-block">
+				
+					<!-- Reset button -->
+					<div id="reset" class="button">
+						<span>RESET</span>
+					</div>
+					<!-- end reset button -->
+					
+					<!-- score -->
+					<div id="score">
+						<p class="score-title">
+							<strong>Score</strong>
+						</p>
+						<p class="score-1">
+							Player 1<br>
+							<span class="score-num">0</span>
+						</p>
+						<p class="score-2">
+							Player 2<br>
+							<span class="score-num">0</span>
+						</p>
+					</div>
+					<!-- end score -->
+					
+				</div>
+				<!-- end relative positioned box -->
+					
+			</div>
+			<!-- end left column container -->
+	            		
+    	</div>
+    <script type="text/javascript" src="tic-tac-toe.js"></script>
+    </body>
+</html>
