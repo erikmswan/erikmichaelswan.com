@@ -579,6 +579,11 @@ span.quote-bottom-4 {
 	margin: 35px auto 0;
 }
 
+.row:nth-of-type(3) .w1-3 {
+	margin:30px auto 0;
+	float:none;
+}
+
 .w1-3 {
 	width:30%;
 	float:left;
@@ -597,8 +602,7 @@ span.quote-bottom-4 {
 	margin-right:0;
 }
 
-.w1-3:nth-of-type(1):nth-last-of-type(3),
-.w1-3:nth-of-type(1):nth-last-of-type(2) {
+.w1-3:nth-of-type(1):nth-last-of-type(3) {
 	margin-left: 18%;
 }
 
