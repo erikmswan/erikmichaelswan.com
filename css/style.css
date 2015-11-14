@@ -253,7 +253,7 @@ footer {
 
 .buttons {
     float:right;
-    margin-top:40px;
+    margin-top:24px;
     margin-right:20%;
     transition: all .3s ease-in-out; 
 }
