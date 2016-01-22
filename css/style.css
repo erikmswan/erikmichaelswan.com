@@ -42,7 +42,7 @@ Erik Michael Swan
 }
 
 /* Fadein, Faderight, Fadeleft */
-	
+
 /* Safari, Chrome and Opera > 12.1 */
 @-webkit-keyframes fadein {
 	from { left: 100px; }
@@ -102,8 +102,8 @@ dl, dt, dd, ol, ul, li,
 fieldset, form, label, legend,
 table, caption, tbody, tfoot, thead, tr, th, td,Fab
 
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
 menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
 	margin: 0;
@@ -115,7 +115,7 @@ time, mark, audio, video {
 }
 
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
+article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
 	display: block;
 }
@@ -138,8 +138,8 @@ table {
 	border-spacing: 0;
 }
 
-	
-	
+
+
 /*** Clearfix ***/
 
 .cf:before,
@@ -223,14 +223,14 @@ footer {
 	background-color:#588C7E;
 	text-align:center;
 }
-	
+
 
 /*** Main Nav ***/
 
 .main-nav {
 	background: #8C4646;
 	padding: 20px 0 0 0;
-	border-bottom:5px solid #F2AE72;	
+	border-bottom:5px solid #F2AE72;
     position:absolute;
     display:block;
     width:100%;
@@ -244,7 +244,7 @@ footer {
 	float:left;
 	padding-bottom:10px;
 	margin-left:20%;
-	   
+
 }
 
 .big-title h1 {
@@ -255,7 +255,7 @@ footer {
     float:right;
     margin-top:24px;
     margin-right:20%;
-    transition: all .3s ease-in-out; 
+    transition: all .3s ease-in-out;
 }
 
 li.menu-button {
@@ -277,7 +277,7 @@ li.menu-button:hover, .scroll-title:hover {
 	background-color: rgba(217, 100, 89, 1);
 }
 
-	
+
 /*** Scroll Nav ***/
 
 .scroll-nav {
@@ -303,7 +303,7 @@ li.menu-button:hover, .scroll-title:hover {
 .scroll-title {
     display:block;
     padding: 8px 20px;
-   
+
 }
 
 
@@ -333,7 +333,7 @@ li.menu-button:hover, .scroll-title:hover {
 }
 
 .section-title {
-	margin-top:.5em;	
+	margin-top:.5em;
 }
 
 .painting-bg, .group-bg, .forest-bg {
@@ -341,7 +341,7 @@ li.menu-button:hover, .scroll-title:hover {
 }
 
 .painting-bg {
-	background: url(images/painting-background.jpg) no-repeat 50% 70%;	
+	background: url(images/painting-background.jpg) no-repeat 50% 70%;
 }
 
 .group-bg {
@@ -496,7 +496,7 @@ span.quote-bottom-4 {
 
 .big {
 	font-size:2.5em;
-	color: #e8e8e8; 
+	color: #e8e8e8;
 }
 
 .intro {
@@ -512,7 +512,7 @@ span.quote-bottom-4 {
 	width:200px;
 }
 
-	
+
 /*** EDUCATION ***/
 
 #education {
@@ -542,7 +542,7 @@ span.quote-bottom-4 {
 	right:0;
 	opacity:1;
 }
-	
+
 .ucb-seal {
 	position:absolute;
 	left:104%;
@@ -576,11 +576,6 @@ span.quote-bottom-4 {
 	box-sizing:border-box;
 	width:100%;
 	margin: 0 auto 0;
-}
-
-.row:nth-of-type(3) .w1-3 {
-	margin:30px auto 0;
-	float:none;
 }
 
 .w1-3 {
@@ -721,29 +716,29 @@ span.quote-bottom-4 {
 }
 
 
-/* 
- * 
+/*
+ *
  * MOBILE-FRIENDLY MEDIA QUERIES
- * 
+ *
  */
 
 
 @media screen and (max-width: 1035px) {
-	
+
 	/* Generic Elements */
 	h1 {
 		font-size: 1.5em;
 	}
-	
+
 	/* Nav */
 	.buttons {
 		margin: 1em 15% 0 0;
 	}
-	
+
 	.scroll-title-container {
 		margin-left:15%;
 	}
-	
+
 	/* Wedges & Backgrounds */
 	.content {
 		width:80%;
@@ -752,45 +747,45 @@ span.quote-bottom-4 {
 		height:100vh;
 		background-position: 55% 35%;
 	}
-	
+
 	/* Quote */
 	.quote-top {
 		font-size:2.5em;
 		padding-top:33vh;
 	}
-	
+
 	.quote-bottom {
 		font-size: 1.8em;
 		padding-top:5vh;
 	}
-	
+
 	/* Intro */
 	.portrait {
 		left:50%;
 		margin-left:-102px;
 		top:-190px;
 	}
-	
+
 	.intro-wrap {
 		margin-top:12em;
 		margin-bottom:2em;
 	}
-	
+
 	/* Education */
 	.ucb-seal {
 		margin-top:-120px;
 		margin-left:-190px;
 	}
-	
+
 	.berkeley {
 		margin-top:11em;
 	}
-	
+
 	.cam-seal {
 		margin-right:-155px;
-		margin-top:-150px;	
+		margin-top:-150px;
 	}
-	
+
 	.cambridge {
 		margin-top:11em;
 	}
@@ -803,49 +798,49 @@ span.quote-bottom-4 {
 }
 
 @media screen and (max-width:770px) {
-	
+
 	/* Nav */
 	.main-nav {
 		text-align:center;
 	}
-	
+
 	.big-title {
 		margin-left:auto;
 		margin-right:auto;
 		float:none;
 	}
-	
+
 	.buttons {
 		display:block;
 		margin: 0 auto 0 auto;
 		float:none;
 	}
-	
+
 	.scroll-nav, .buttons {
 		margin-right:auto;
 	}
-	
+
 	.scroll-title-container{
 		margin-left:10%;
 	}
-	
+
 	/* Backgrounds */
 
 	.painting-bg {
-		background: url(images/painting-bg-mob.jpeg) no-repeat 
+		background: url(images/painting-bg-mob.jpeg) no-repeat
 50% 70%;
-	}	
-	
+	}
+
 	.group-bg {
-		background: url(images/group-mob.jpeg) no-repeat 55% 
+		background: url(images/group-mob.jpeg) no-repeat 55%
 35%;
-	}	
+	}
 
 	.forest-bg {
-		background: url(images/forest-mob.jpeg) no-repeat center 
+		background: url(images/forest-mob.jpeg) no-repeat center
 center;
 	}
-	
+
 	.painting-bg, .group-bg, .forest-bg {
 		background-size:cover;
 	}
@@ -854,26 +849,26 @@ center;
 	.quote-top {
 		font-size:1.6em;
 	}
-	
+
 	.quote-mid {
 		font-size:1em;
 	}
-	
+
 	.quote-bottom {
 		font-size:1.3em;
 	}
-	
+
 	.quote-attribution {
 		font-size: 1.2em;
 		margin-right:15%;
 	}
-	
+
 	/* Portfolio */
 	.w1-3 {
 		width:100%;
 		margin-bottom:2em;
 	}
-	
+
 	.w1-3:nth-of-type(1):nth-last-of-type(3),
 	.w1-3:nth-of-type(1):nth-last-of-type(2) {
 		margin-left: 0;
@@ -885,22 +880,22 @@ center;
 	.main-nav {
 		text-align:center;
 	}
-	
+
 	.big-title {
 		margin-left:auto;
 		margin-right:auto;
 		float:none;
 	}
-	
+
 	.buttons {
 		display:none;
 	}
-	
+
 	.scroll-title-container {
 		margin: 0 auto 0 auto;
 		float:none;
 	}
-	
+
 	/* Education */
 	.ucb-seal {
 		margin-top:-100px;
@@ -909,11 +904,11 @@ center;
 }
 
 @media screen and (max-width:480px) {
-	
+
 	.painting-bg, .forest-bg, .group-bg {
 		background-size:cover;
 	}
-	
+
 	/* Wedges & Backgrounds */
 	.content {
 		width:90%;
