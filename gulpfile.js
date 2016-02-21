@@ -21,19 +21,19 @@ var vinylfs = require('vinyl-fs');
 var dir = {
   root: {
     dist: './dist/',
-    live: './live/'
+    live: '../es/'
   },
   js: {
     dist: './dist/js',
-    live: './live/js'
+    live: '../es/js'
   },
   css: {
     dist: './dist/css',
-    live: './live/css'
+    live: '../es/css'
   },
   img: {
     dist: './dist/css/images',
-    live: './live/css/images'
+    live: '../es/css/images'
   }
 }
 
@@ -89,13 +89,12 @@ gulp.task('minifyHTML', function() {
 		.pipe(minifyHTML())
 		.pipe(gulp.dest(dir.root.dist))
     .pipe(gulp.dest(dir.root.live));
-})
+});
 
+
+/* BUILD ------------------------ */
 // Build out all files that haven't yet been built
 gulp.task('build', function() {
-  var src = ['./src/*', './src/**/*'],
-      dest = makeDest();
-
   gulp.src(['./src/*', './src/**/*'])
     .pipe(changed(dir.root.dist))
     .pipe(gulp.dest(dir.root.dist))
@@ -103,7 +102,7 @@ gulp.task('build', function() {
 });
 
 // default task
-gulp.task('default', ['minifyHTML', 'scripts', 'styles', 'imagemin']);
+gulp.task('default', ['minifyHTML', 'scripts', 'styles', 'imagemin', 'build']);
 
 // watch task
 gulp.task('watch', function() {
