@@ -1,0 +1,478 @@
+/*******************************
+
+erikmichaelswan.com
+	Began 2015-2-8
+
+********************************/
+
+
+/* KEYFRAMES ------------------------------ */
+
+/* Quotefade */
+@keyframes quote-fade-in {
+    from { opacity:0; }
+    to   { opacity: 1; }
+}
+
+
+/* VARIABLES ------------------------------ */
+/* Palette */
+@teal: #588C7E;
+@yellow: #f4c974;
+@beige: #b1af92;
+@burgundy: #7b4651;
+
+
+/* GENERIC ------------------------------ */
+body {
+	font-family: Roboto, arial, sans-serif;
+	font-weight:200;
+	width:100%;
+	-webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size:14px;
+  margin:0;
+}
+h1, h2, h3, h4, h5, h6, p, ul, ol, a, strong, em, sup {
+  -webkit-margin-before:0;
+  -webkit-margin-after:0;
+}
+h1, h2, h3, h4, h5, h6, p { color:#fff; }
+h1 {
+  font-size:2.8em;
+  margin:0;
+}
+h2 {
+	font-size:2.1em;
+	margin-top:3em;
+  margin-bottom:0.4em;
+}
+h3 { font-size:2.1em; }
+h4 {
+  font-size:1.9em;
+	text-transform:uppercase;
+	text-align:center;
+	margin-top:90px;
+}
+h5 { font-size: 1.7em; }
+h6 { font-size: 1.5em; }
+p {
+	font-size:1em;
+	line-height:1.3em;
+	color: #fff;
+  margin:0;
+}
+a {
+	text-decoration: none;
+	color:#fff;
+}
+ul {
+  list-style:circle outside;
+	color:#fff;
+	line-height:1.15em;
+  padding-left:0;
+	margin:0 12px 12px;
+  li { margin-top:13px; }
+}
+footer { background-color:@teal; }
+
+
+/* MODULAR ------------------------------ */
+#body {
+  .clear-both { clear:both; }
+
+  .teal-bg { background-color: @teal; }
+  .red-bg { background-color:@burgundy; }
+  .text-center { text-align:center; }
+  .valign-top { vertical-align: top; }
+  .margin-bottom { margin-bottom:40px; }
+
+  .fade-up,
+  .fade-left {
+  	transform:translateY(0) !important;
+    transform:translateX(0) !important;
+  	opacity:1 !important;
+  }
+}
+
+
+/* HEADER ------------------------------ */
+.main-nav {
+	background: @burgundy;
+  position:absolute;
+  width:100%;
+	padding: 10px 0 0 0;
+	border-bottom:5px solid @yellow;
+  .big-title {
+  	float:left;
+  	padding-bottom:10px;
+  	margin-left:20%;
+    h1 {
+      font-size:1.9em;
+      text-transform:none;
+    }
+  }
+}
+
+.sub-nav {
+  .sub-nav-inner {
+    float:right;
+    margin:27px 20% 0 0;
+    transition: all 0.3s;
+    .sub-nav-button {
+      display:inline-block;
+      margin-top:0;
+      a {
+        line-height:2.3em;
+      	padding: 8px 20px;
+      }
+    }
+  }
+  .scroll-title-container { display:none; }
+  .scroll-title:hover { background-color: @yellow; }
+}
+
+.main-nav,
+.sub-nav-button,
+.scroll-title { transition: all 0.3s; }
+
+
+/* Scroll Nav */
+.scroll-nav {
+  position:fixed;
+  width:100%;
+  padding: 0;
+  margin:0 inherit 0 0;
+  z-index:1;
+  .scroll-title-container {
+    display:none;
+    float:left;
+    margin-left:19%;
+  }
+  .scroll-title {
+    display:block;
+    padding: 8px 20px;
+  }
+  .sub-nav-inner { margin-top:0; }
+}
+
+
+/* WEDGES -------------------------------- */
+.wedge {
+  padding: 20px;
+  box-sizing:border-box;
+  h1 { margin-top:.5em; }
+}
+
+.separator {
+	display:block;
+	width:100px;
+  margin: 3em auto 2em auto;
+}
+
+.painting-bg { background: url(../img/painting-bg.jpg) no-repeat 50% 70% / cover; }
+.group-bg { background: url(../img/group-bg.jpg) no-repeat 0% 35% / cover; }
+.forest-bg { background: url(../img/forest-bg.jpg) no-repeat center center / cover; }
+.painting-bg,
+.group-bg,
+.forest-bg {
+  height:600px; /* Fallback */
+  height:100vh;
+	background-attachment:fixed;
+}
+
+.content {
+  width:60%;
+  margin-left:auto;
+  margin-right:auto;
+}
+
+
+/* QUOTE -------------------- */
+
+.quote-top span, .quote-bottom span, .quote-attribution span { opacity:0; }
+.quote-fade-in span { animation: quote-fade-in 2s 0.3s forwards; }
+
+.quote-top,
+.quote-bottom {
+  font-size:3em;
+  line-height:0.7em;
+  padding-top:27vh;
+  .quote-top-1 {
+  	font-size:0.91em;
+  	letter-spacing:-0.02em;
+  	word-spacing:0.04em;
+  }
+  .quote-top-bold,
+  .quote-bottom-bold {
+  	font-weight:bold;
+  	letter-spacing:0em;
+  	animation-delay: 0.7s;
+  }
+  .quote-top-2,
+  .quote-bottom-2 {
+  	font-family: 'Amatic SC', cursive;
+  	font-size:2.6em;
+  	line-height:1em;
+  	word-spacing:-0.24em;
+  	letter-spacing:0.15em;
+  	animation-delay: 1.5s;
+  }
+  .quote-top-3,
+  .quote-bottom-3 {
+  	font-family:"Courier New", Courier, monospace;
+  	font-size:0.52em;
+  	word-spacing:-0.1em;
+  	animation-delay: 2s;
+  }
+  .quote-top-4,
+  .quote-bottom-4 {
+  	font-size:0.8em;
+  	letter-spacing:0.38em;
+  	animation-delay: 2.8s;
+  }
+}
+
+.quote-bottom {
+  font-size:2em;
+  padding-top:10vh;
+  .quote-bottom-1,
+  .quote-bottom-2,
+  .quote-bottom-3,
+  .quote-bottom-4 { animation-delay: 4.2s; }
+  .quote-bottom-1 {
+  	font-size:0.9em;
+  	letter-spacing:-0.01em;
+  }
+  .quote-bottom-bold { animation-delay: 5s; }
+  .quote-bottom-2 { font-size:2.1em; }
+  .quote-bottom-4 { letter-spacing:0.31em; }
+}
+
+.quote-attribution {
+  font-size:2.5em;
+  line-height:15vh;
+  text-align:right;
+  margin-right:10%;
+  margin-top:-1vh;
+  span { animation-delay: 5.8s; }
+}
+
+
+/* INTRO ---------------------------- */
+#intro {
+  .content {
+    position:relative;
+    transform:translateY(100px);
+  	margin-top: 100px;
+  	margin-bottom: 100px;
+    opacity:0;
+  	transition: all 0.3s ease-out;
+    p { margin-top:1em; }
+    .big { font-size:2.5em; }
+    .portrait {
+      position:absolute;
+    	right:103%;
+      width:200px;
+    	border-radius:50%;
+    }
+  }
+}
+
+
+/* EDUCATION ---------------------------- */
+#education {
+  overflow:hidden;
+  .berkeley,
+  .cambridge {
+  	position:relative;
+    transform: translateX(-100px);
+  	opacity:0;
+  	transition: all 0.4s ease-out;
+    &.margin-bottom { margin-bottom: 60px; }
+    .ucb-seal,
+    .cam-seal {
+      position:absolute;
+    	right:104%;
+    	width:125px;
+    }
+  }
+}
+
+
+/* PORTFOLIO ---------------------------- */
+#portfolio {
+  .content {
+    width:100%;
+    max-width:1280px;
+    margin:0 auto;
+  }
+  a { text-decoration:underline; }
+  .port-title {
+    font-size:1.6em;
+  	line-height:1em;
+    font-weight:bold;
+  	padding-top:10px;
+    margin: 19px 3px;
+    a { text-decoration:none; }
+  }
+  .sub { margin-bottom:10px; }
+  .port-img {
+    box-shadow: 0 0 16px -3px #000;
+    display:block;
+  	width:90%;
+  	border-radius:7px;
+  	margin-left:auto;
+  	margin-right:auto;
+  }
+}
+
+
+/* FOOTER ------------------------*/
+#contact {
+  .big { font-size:4.5em; }
+  .gmail {
+  	width:35px;
+  	margin-right:10px;
+  }
+  .sm-icon {
+  	width:35px;
+  	border-radius:50%;
+  	margin:0 5px;
+  	transition:all 0.3s;
+  	box-shadow: 0px 0px 0px 0px @beige;
+    &:hover { box-shadow: 0px 0px 8px 0px @beige; }
+  }
+  .copyright {
+  	font-size:.7em;
+  	padding-bottom:30px;
+  }
+}
+
+
+@media screen and (max-width: 1035px) {
+
+	/* Nav */
+	.sub-nav {
+    .sub-nav-inner { margin: 24px 15% 0 0; }
+    .scroll-title-container { margin-left:15%;}
+  }
+  .scroll-nav {
+    .sub-nav-inner { margin-top:0; }
+  }
+
+	/* Wedge */
+	#body {
+    .content { width:80%; }
+  }
+  #portfolio {
+    .content { width:100%; }
+  }
+  .group-bg,
+  .forest-bg {
+		height:100vh;
+		background-position: 55% 35%;
+	}
+
+	/* Quote */
+	.quote-top {
+		font-size:2.5em;
+		padding-top:33vh;
+	}
+	.quote-bottom {
+		font-size: 1.8em;
+		padding-top:5vh;
+	}
+
+	/* Intro */
+	#intro{
+    .content {
+      margin-top:15em;
+  		margin-bottom:2em;
+      .portrait {
+    		left:50%;
+    		margin-left:-102px;
+    		top:-190px;
+    	}
+    }
+  }
+
+	/* Education */
+  #education {
+    .berkeley,
+    .cambridge {
+      margin-top:13em;
+      .ucb-seal,
+      .cam-seal {
+        margin-right:-95px;
+        margin-top:-110px;
+        width:90px;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width:830px) {
+	.sub-nav {
+    .sub-nav-inner { margin-right:11%; }
+  }
+}
+
+@media screen and (max-width:767px) {
+
+	/* Nav */
+	.main-nav {
+    .big-title {
+      float:none;
+      margin-left:auto;
+      margin-right:auto;
+    }
+  }
+
+  .sub-nav {
+    .sub-nav-inner {
+      float:none;
+      display:block;
+      padding-left:0;
+      margin: 0 auto 0 auto;
+    }
+  }
+
+	.scroll-nav{
+    margin-right:auto;
+    .scroll-title-container { margin-left:10%; }
+  }
+
+	/* Backgrounds */
+  .painting-bg { background: url('../img/painting-bg-mob.jpg') no-repeat 50% 70% / cover; }
+  .group-bg { background: url('../img/group-bg-mob.jpg') no-repeat 55% 35% / cover; }
+  .forest-bg { background: url('../img/forest-bg-mob.jpg') no-repeat center center /cover; }
+
+	/* Quote */
+	.quote-top { font-size:1.6em; }
+	.quote-bottom { font-size:1.3em; }
+	.quote-attribution {
+		font-size: 1.2em;
+		margin-right:15%;
+	}
+
+  /* Portfolio */
+  #portfolio .port-title { margin: 59px 3px 19px; }
+}
+
+@media screen and (max-width:560px) {
+
+  /* Nav */
+	.sub-nav {
+    .sub-nav-inner { display:none; }
+    .scroll-title-container {
+      float:none;
+  		margin: 0 auto 0 auto;
+  	}
+  }
+}
+
+@media screen and (max-width:480px) {
+
+	.content { width:90%; }
+}
