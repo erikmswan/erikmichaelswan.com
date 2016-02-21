@@ -12,6 +12,7 @@ var stripDebug = require('gulp-strip-debug');
 var uglify = require('gulp-uglify');
 var autoprefix = require('gulp-autoprefixer');
 var minifyCSS = require('gulp-minify-css');
+var less = require('gulp-less');
 var gzip = require('gulp-gzip');
 var smushit = require('gulp-smushit');
 var vinylfs = require('vinyl-fs');
@@ -32,8 +33,8 @@ var dir = {
     live: '../es/css'
   },
   img: {
-    dist: './dist/css/images',
-    live: '../es/css/images'
+    dist: './dist/images',
+    live: '../es/images'
   }
 }
 
@@ -63,7 +64,7 @@ gulp.task('scripts', function() {
 gulp.task('styles', function() {
   gulp.src(['./src/css/*.css'])
     .pipe(concat('style.css'))
-    .pipe(autoprefix('last 2 versions'))
+    .pipe(autoprefix())
     .pipe(minifyCSS())
     .pipe(gulp.dest(dir.css.dist))
     .pipe(gulp.dest(dir.css.live));
@@ -108,23 +109,14 @@ gulp.task('default', ['minifyHTML', 'scripts', 'styles', 'imagemin', 'build']);
 gulp.task('watch', function() {
 
   // HTML
-  gulp.watch('./src/*.html', function() {
-    gulp.run('minifyHTML');
-  });
+  gulp.watch('./src/*.html', ['minifyHTML']);
 
   // CSS
-  gulp.watch('./src/css/*.css', function() {
-    gulp.run('styles');
-  });
+  gulp.watch('./src/css/*.css', ['styles']);
 
   // JS
-  gulp.watch('./src/js/*.js', function() {
-    gulp.run('scripts');
-    gulp.run('jshint');
-  });
+  gulp.watch('./src/js/*.js', ['scripts', 'jshint']);
 
   // Build
-  gulp.watch(['./src/*', './src/**/*'], function() {
-    gulp.run('build');
-  });
+  gulp.watch(['./src/*', './src/**/*'], ['build']);
 });
