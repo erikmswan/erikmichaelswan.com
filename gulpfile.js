@@ -67,7 +67,7 @@ gulp.task('less', function () {
     .pipe(less())
     .pipe(sourcemaps.write())
     .pipe(autoprefix())
-    // .pipe(minifyCSS())
+    .pipe(minifyCSS())
     .pipe(gulp.dest(dir.css.dist))
     .pipe(gulp.dest(dir.css.live));
 });
