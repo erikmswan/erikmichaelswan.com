@@ -313,13 +313,25 @@ class="quote-bottom-3">not sincerity,</span>
 					</p>
 					<ul>
 						<li>
-							An extension for jQuery to help handle media queries in javascript
+							An extension and plugin for jQuery to help handle media queries in javascript
 						</li>
             <li>
-              Currently only has parsing capabilities, returning a boolean after evaluating strings such as "&gt;380 && &lt;768" against the current viewport
+              The first component, the extension, will accept strings and query them against the viewport.
             </li>
             <li>
-              Will ultimately support callbacks to run when matching and not matching the passed media query
+              For example, "<strong>$.mediaQuery('&gt;320');</strong>" will check if the current viewport is greater than 320px wide
+            </li>
+            <li>
+              Full logic capabilities are available, meaning it will accept queries such as "<strong>(&gt;320 &amp;&amp; &lt;768) || (&gt;920 &amp;&amp; &lt;1200)</strong>"
+            </li>
+            <li>
+              The plugin will run up to 2 functions against the jQuery collection upon which it is invoked when the passed media query is matched or unmatched, respectively.
+            </li>
+            <li>
+               For example: "<strong>$(el).mediaQuery('&gt;768', matchingFunction, unMatchingFunction);</strong>" will run the matching function when the window is above 768px and the unmatching function when the window is 768 or below (with optional toggle so it only runs once!)
+            </li>
+            <li>
+              Please <a class="text-decoration" href="https://github.com/erikmswan/mediaQuery.js">visit on GitHub</a> for more information!
             </li>
 					</ul>
 				</div>
