@@ -2,7 +2,7 @@
 var gulp = require('gulp');
 
 // include plug-ins
-var jshint = require('gulp-jshint');
+// var jshint = require('gulp-jshint');
 var stripDebug = require('gulp-strip-debug');
 var uglify = require('gulp-uglify');
 var autoprefix = require('gulp-autoprefixer');
@@ -44,10 +44,10 @@ var dir = {
 /* SCRIPTS ------------------------ */
 // JSHint task
 gulp.task('jshint', function() {
-  gulp.src('./src/js/*.js')
-    .pipe(cache('linting'))
-    .pipe(jshint())
-    .pipe(jshint.reporter('jshint-stylish'));
+  // gulp.src('./src/js/*.js')
+  //   .pipe(cache('linting'))
+  //   .pipe(jshint())
+  //   .pipe(jshint.reporter('jshint-stylish'));
 });
 
 // JS concat, strip debugging and minify
@@ -62,12 +62,11 @@ gulp.task('scripts', function() {
 
 /* Less ------------------------ */
 gulp.task('less', function () {
-  gulp.src(['./src/css/*.less'])
+  gulp.src('./src/css/*.less')
     .pipe(sourcemaps.init())
     .pipe(less())
     .pipe(sourcemaps.write())
     .pipe(autoprefix())
-    .pipe(minifyCSS())
     .pipe(gulp.dest(dir.css.dist))
     .pipe(gulp.dest(dir.css.live));
 });
@@ -76,17 +75,17 @@ gulp.task('less', function () {
 /* MARKUP & ASSETS --------------------- */
 // minify html
 gulp.task('minifyHTML', function() {
-	gulp.src('./src/*.html')
-		.pipe(changed(dir.root.dist))
-    .pipe(changed(dir.root.live))
-		.pipe(minifyHTML())
-		.pipe(gulp.dest(dir.root.dist))
-    .pipe(gulp.dest(dir.root.live));
+	// gulp.src('./src/*.html')
+	// 	.pipe(changed(dir.root.dist))
+  //   .pipe(changed(dir.root.live))
+	// 	.pipe(minifyHTML())
+	// 	.pipe(gulp.dest(dir.root.dist))
+  //   .pipe(gulp.dest(dir.root.live));
 });
 
 // minify new images
 gulp.task('imagemin', function() {
-  gulp.src('./src/css/images/*.{jpg,png}')
+  gulp.src('./src/img/*.{jpg,png}')
     .pipe(changed(dir.img.dist))
     .pipe(changed(dir.img.live))
     .pipe(imagemin())
@@ -99,8 +98,6 @@ gulp.task('imagemin', function() {
 // Build out all files that haven't yet been built
 gulp.task('build', function() {
   gulp.src(['./src/*', './src/**/*', '!./src/**/*.less'])
-    .pipe(changed(dir.root.dist))
-    .pipe(changed(dir.root.live))
     .pipe(gulp.dest(dir.root.dist))
     .pipe(gulp.dest(dir.root.live));
 });
@@ -110,7 +107,7 @@ gulp.task('tasks', tasks);
 
 
 /* DEFAULT --------------------*/
-gulp.task('default', ['minifyHTML', 'scripts', 'less', 'imagemin', 'build']);
+gulp.task('default', ['build', 'minifyHTML', 'scripts', 'less', 'imagemin']);
 
 
 /* WATCH --------------------*/
