@@ -21,6 +21,8 @@ erikmichaelswan.com
 @yellow: #f4c974;
 @beige: #b1af92;
 @burgundy: #7b4651;
+@orange: #F2AE72;
+@red: #D96459;
 
 /* Responsive */
 @screen-md-up: 993px;
@@ -148,14 +150,18 @@ footer { background-color:@teal; }
     .sub-nav-button {
       display:inline-block;
       margin-top:0;
-      a {
-        line-height:2.3em;
-      	padding: 8px 20px;
-      }
     }
   }
   .scroll-title-container { display:none; }
-  .scroll-title:hover { background-color: @yellow; }
+  a {
+    font-size:1.2rem;
+    display:block;
+    line-height:1em;
+    padding: 9px 20px;
+    transition:all 0.3s;
+  }
+  a:hover,
+  a:focus { background-color: @red; }
 }
 
 .main-nav,
@@ -168,17 +174,12 @@ footer { background-color:@teal; }
   position:fixed;
   width:100%;
   padding: 0;
-  margin:0 inherit 0 0;
+  margin:0;
   z-index:1;
   .scroll-title-container {
     display:none;
     float:left;
     margin-left:19%;
-  }
-  .scroll-title {
-    font-size:1.2em;
-    display:block;
-    padding: 8px 20px;
   }
   .sub-nav-inner { margin-top:0; }
 }
