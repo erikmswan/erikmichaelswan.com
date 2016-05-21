@@ -22,6 +22,20 @@ erikmichaelswan.com
 @beige: #b1af92;
 @burgundy: #7b4651;
 
+/* Responsive */
+@screen-md-up: 993px;
+@md-up: ~"screen and (min-width:@{screen-md-up})";
+@screen-md: 992px;
+@md: ~"screen and (max-width:@{screen-md})";
+@screen-sm-up: 768px;
+@sm-up: ~"screen and (min-width:@{screen-sm-up})";
+@screen-sm: 767px;
+@sm: ~"screen and (max-width:@{screen-sm})";
+@screen-xs-up: 480px;
+@xs-up: ~"screen and (min-width:@{screen-xs-up})";
+@screen-xs: 479px;
+@xs: ~"screen and (max-width:@{screen-xs})";
+
 
 /* GENERIC ------------------------------ */
 body {
@@ -86,7 +100,18 @@ footer { background-color:@teal; }
   .red-bg { background-color:@burgundy; }
   .text-center { text-align:center; }
   .valign-top { vertical-align: top; }
+
+  .margin-top { margin-top:40px; }
+  .margin-right { margin-right:40px; }
   .margin-bottom { margin-bottom:40px; }
+  .margin-left { margin-left:40px; }
+
+  @media @sm-up {
+    .margin-top-sm-up { margin-top:40px; }
+    .margin-right-sm-up { margin-right:40px; }
+    .margin-bottom-sm-up { margin-bottom:40px; }
+    .margin-left-sm-up { margin-left:40px; }
+  }
 
   .fade-up,
   .fade-left {
@@ -300,6 +325,7 @@ footer { background-color:@teal; }
     	width:125px;
     }
   }
+  .cambridge { transition-delay: 0.1s; }
 }
 
 

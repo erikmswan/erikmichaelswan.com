@@ -37,7 +37,7 @@ makeScene('#intro')
 makeScene('.berkeley')
 	.setClassToggle('.berkeley', 'fade-left')
 	.addTo(scrollControl);
-makeScene('.cambridge')
+makeScene('.berkeley')
 	.setClassToggle('.cambridge', 'fade-left')
 	.addTo(scrollControl);
 
