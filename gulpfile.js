@@ -35,8 +35,8 @@ var dir = {
     live: '../es/css'
   },
   img: {
-    dist: './dist/images',
-    live: '../es/images'
+    dist: './dist/img',
+    live: '../es/img'
   }
 }
 
